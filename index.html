@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Handling Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <div class="dashboard" id="admin-dashboard">
+        <input type="text" id="itemName" placeholder="Item Name">
+        <input type="file" id="drawingImage">
+        <input type="number" id="quantity" placeholder="Quantity">
+        <input type="text" id="companyName" placeholder="Company Name">
+        <input type="date" id="deliveryDate">
+        <button onclick="addItem()">Add Item</button>
+        <button onclick="printTable()">🖨️ Print Table</button>
+
+    </div>
+
+    <h2>Production Dashboard</h2>
+    
+    <label for="companyFilter">Filter by Company:</label>
+<select id="companyFilter" onchange="filterByCompany()">
+    <option value="all">All Companies</option>
+</select>
+
+    <div class="dashboard" id="user-dashboard">
+        <table id="itemTable">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Drawing Image</th>
+                    <th>Quantity</th>
+                    <th>Company Name</th> <!-- NEW -->
+                    <th>Delivery Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
